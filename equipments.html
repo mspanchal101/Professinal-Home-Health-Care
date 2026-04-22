@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarePlus Equipment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:#111;
+    padding-top:80px;
+    overflow-x:hidden;
+}
+
+/* PREMIUM BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b') center/cover;
+    filter:blur(6px);
+    z-index:-2;
+}
+body::after{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.95));
+    z-index:-1;
+}
+
+/* NAVBAR */
+.navbar{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(12px);
+    box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px 40px;
+}
+.hero h1{
+    font-size:50px;
+    font-weight:600;
+    background:linear-gradient(to right,#0d6efd,#20c997);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.hero p{
+    color:#555;
+}
+
+/* SECTION */
+.section{
+    padding:40px 60px;
+}
+
+/* TITLE */
+.section h2{
+    font-weight:600;
+    margin-bottom:30px;
+    position:relative;
+}
+.section h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:#0d6efd;
+    position:absolute;
+    bottom:-5px;
+    left:0;
+}
+
+/* CARD STYLE ITEM */
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.4s;
+    transform:translateY(30px);
+    opacity:0;
+}
+
+/* ANIMATION */
+.item.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* HOVER EFFECT */
+.item:hover{
+    transform:scale(1.03);
+    box-shadow:0 20px 50px rgba(13,110,253,0.2);
+}
+
+/* TEXT */
+.name{
+    font-weight:600;
+    font-size:18px;
+}
+.desc{
+    color:#555;
+}
+
+/* CTA */
+.cta{
+    margin:60px;
+    padding:50px;
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+    color:white;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(13,110,253,0.3);
+}
+.cta button{
+    background:white;
+    color:#0d6efd;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    margin-top:10px;
+    font-weight:500;
+}
+.cta button:hover{
+    background:#f1f1f1;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="index.html">CarePlus</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="medicines.html">Medicines</a></li>
+        <li><a class="nav-link active" href="#">Equipments</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Hospital Equipment</h1>
+<p>Professional medical equipment available for home care services.</p>
+</div>
+
+<!-- ICU -->
+<div class="section">
+<h2>ICU Equipment</h2>
+
+<div class="item"><div class="name">Ventilator</div><div class="desc">Provides respiratory support for critical patients.</div></div>
+<div class="item"><div class="name">Patient Monitor</div><div class="desc">Tracks heart rate, oxygen level and BP.</div></div>
+<div class="item"><div class="name">Suction Machine</div><div class="desc">Helps clear airway for better breathing.</div></div>
+
+</div>
+
+<!-- HOME -->
+<div class="section">
+<h2>Home Care Equipment</h2>
+
+<div class="item"><div class="name">Hospital Bed</div><div class="desc">Adjustable bed for patient comfort.</div></div>
+<div class="item"><div class="name">Oxygen Concentrator</div><div class="desc">Provides continuous oxygen supply.</div></div>
+<div class="item"><div class="name">Wheelchair</div><div class="desc">Supports mobility and movement.</div></div>
+
+</div>
+
+<!-- MONITORING -->
+<div class="section">
+<h2>Monitoring Equipment</h2>
+
+<div class="item"><div class="name">BP Machine</div><div class="desc">Measures blood pressure levels.</div></div>
+<div class="item"><div class="name">Glucometer</div><div class="desc">Checks blood sugar levels.</div></div>
+<div class="item"><div class="name">Pulse Oximeter</div><div class="desc">Measures oxygen saturation.</div></div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<h3>Need Equipment at Home?</h3>
+<p>Contact us for professional medical equipment services.</p>
+<button onclick="location.href='contact.html'">Contact Now</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// SCROLL ANIMATION
+const items = document.querySelectorAll(".item");
+
+window.addEventListener("scroll",()=>{
+    items.forEach(el=>{
+        let top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
